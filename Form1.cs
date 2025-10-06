@@ -16,5 +16,10 @@ namespace ModBus
         {
             InitializeComponent();
         }
+
+        private void buttonConnexion_Click(object sender, EventArgs e)
+        {
+            textBox1.AppendText("Connexion au serveur 172.17.50.180");
+        }
     }
 }
