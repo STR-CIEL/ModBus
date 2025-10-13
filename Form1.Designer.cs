@@ -33,6 +33,7 @@
             this.buttonConnexion = new System.Windows.Forms.Button();
             this.buttonDeconnexion = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonLireTension = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelAdresseIP
@@ -82,11 +83,22 @@
             this.textBox1.Size = new System.Drawing.Size(344, 426);
             this.textBox1.TabIndex = 4;
             // 
+            // buttonLireTension
+            // 
+            this.buttonLireTension.Location = new System.Drawing.Point(334, 108);
+            this.buttonLireTension.Name = "buttonLireTension";
+            this.buttonLireTension.Size = new System.Drawing.Size(75, 23);
+            this.buttonLireTension.TabIndex = 6;
+            this.buttonLireTension.Text = "Tension";
+            this.buttonLireTension.UseVisualStyleBackColor = true;
+            this.buttonLireTension.Click += new System.EventHandler(this.buttonLireTension_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonLireTension);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonDeconnexion);
             this.Controls.Add(this.buttonConnexion);
@@ -106,6 +118,7 @@
         private System.Windows.Forms.Button buttonConnexion;
         private System.Windows.Forms.Button buttonDeconnexion;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button buttonLireTension;
     }
 }
 

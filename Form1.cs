@@ -66,5 +66,48 @@ namespace ModBus
                 MessageBox.Show($"Erreur : {ex.Message}");
             }
         }
+
+        private void buttonLireTension_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                
+                    
+                    
+
+
+                    byte[] trameE = new byte[]
+                    {
+                        0x00, 0x00,       // Transaction Identifier (0x0000)
+                        0x00, 0x00,       // Protocol Identifier (0x0000)
+                        0x00, 0x06,       // Length (6 bytes to follow)
+                        0x01,             // Unit Identifier (slave ID = 1)
+                        0x03,             // Function Code (Read Holding Registers)
+                        0x0C, 0x87,       // Starting Address (3207)
+                        0x00, 0x01        // Quantity of Registers (1)
+                    };
+
+
+
+                    socket.Send(trameE);
+                    socket.Receive(trameE);
+
+                    int tension = trameE[9] * 256 + trameE[10];
+                double t = tension / 10;
+                    textBox1.Text = t.ToString();
+
+
+
+            }
+            
+            
+            catch
+            {
+                MessageBox.Show($"Erreur");
+            }
+            
+           
+        }
     }
 }
